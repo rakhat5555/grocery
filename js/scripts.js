@@ -2,12 +2,13 @@ $(document).ready(function() {
   $("form").submit(function(event) {
 var lists = ["some-input1","some-input2","some-input3"];
 
- lists.forEach(function(list){
+
+  lists.forEach(function(list){
    var listInput = $("input#" + list).val();
+   var listInput1 = [listInput.toUpperCase()];
 
-   $("." + list).text(listInput.toUpperCase());
+   $("#demo").append("<li>" + listInput1+"</li>");
  });
-
     // var person1Input = $("input#some-input1").val();
     // var person2Input = $("input#some-input2").val();
     // var animalInput= $("input#some-input3").val();
